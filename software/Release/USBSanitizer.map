@@ -1,0 +1,63 @@
+Future Technology Devices International Limited (c) 2007-2010, All Rights Reserved
+
+
+CPU_CORE =   VC2, CPU_RAM_SIZE= 16 KB, CPU_ROM_SIZE=256 KB
+
+Linker Version  = V1.0.1 Loader Version =  V1.0.1
+Thu Apr 30 01:26:03 2015
+
+
+=================================================================================================================
+
+SEGMENT_MAP    
+=================================================================================================================
+
+Start Address                  Segment Name                   Segment Size
+=================================================================================================================
+
+0003c0 .text                          000000bd5f
+00c11f .dataFlash                     0000000068
+000000 .dataRAM                       0000000068
+000068 .bss                           00000000eb
+000153 .HeapRAM                       0000003aac
+
+=================================================================================================================
+
+SYMBOL_TABLE   
+=================================================================================================================
+
+SYM ADDRESS PUBLIC SYM NAME                SYM TYPE   MEM TYPE FILE NAME            SYM SIZE  
+NOTE:L=LABEL F=FUNCTION 0=FLASH and 1=RAM
+=================================================================================================================
+
+0043a main                           F              0 USBSanitizer.obj     00084
+004be usbhost_connect_state          F              0 USBSanitizer.obj     00058
+00516 open_drivers                   F              0 USBSanitizer.obj     00024
+0053a attach_drivers                 F              0 USBSanitizer.obj     00001
+0053b close_drivers                  F              0 USBSanitizer.obj     00010
+0054b writeString                    F              0 USBSanitizer.obj     00032
+0057d writeShort                     F              0 USBSanitizer.obj     0017a
+006f7 send_cbw                       F              0 USBSanitizer.obj     00032
+00729 receive_data                   F              0 USBSanitizer.obj     00030
+00759 receive_csw                    F              0 USBSanitizer.obj     0002d
+00786 erase_block                    F              0 USBSanitizer.obj     00170
+008f6 get_read_capacity              F              0 USBSanitizer.obj     001a4
+00a9a good_Light                     F              0 USBSanitizer.obj     00017
+00ab1 bad_Light                      F              0 USBSanitizer.obj     0005e
+00b0f firmware                       F              0 USBSanitizer.obj     00245
+00068 hUSBHOSTGENERIC                L              1 USBSanitizer.obj     00002
+0006a hUSBHOST_1                     L              1 USBSanitizer.obj     00002
+0006c tcbFIRMWARE                    L              1 USBSanitizer.obj     00002
+0006e hGPIO_PORT_A                   L              1 USBSanitizer.obj     00002
+0bb9b iomux_setup                    F              0 USBSanitizer_iomux.obj 00088
+0bc23 usbhostGeneric_init            F              0 USBHostGenericDrv.obj 00090
+0bcb3 usbhostGeneric_open            F              0 USBHostGenericDrv.obj 00001
+0bcb4 usbhostGeneric_close           F              0 USBHostGenericDrv.obj 00001
+0bcb5 usbhostGeneric_read            F              0 USBHostGenericDrv.obj 000f6
+0bdab usbhostGeneric_write           F              0 USBHostGenericDrv.obj 000f6
+0bea1 usbhostGeneric_ioctl_setup     F              0 USBHostGenericDrv.obj 000d3
+0bf74 usbhostGeneric_attach          F              0 USBHostGenericDrv.obj 0011c
+0c090 usbhostGeneric_detach          F              0 USBHostGenericDrv.obj 0002e
+0c0be usbhostGeneric_ioctl           F              0 USBHostGenericDrv.obj 00061
+00066 hostGenericCtx                 L              1 USBHostGenericDrv.obj 00002
+0013a usbhostGeneric_cb              L              1 USBHostGenericDrv.obj 00019
