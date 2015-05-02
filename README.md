@@ -3,7 +3,14 @@ USB Sanitizer
 
 A small and cheap standalone USB drive wiper
 
-This is based heavily on the USBHostGeneric example from FTDI as well as USB-Writeblocker by Phil Polstra
+The code is based heavily on the USBHostGeneric example from FTDI as well as USB-Writeblocker by Phil Polstra
+
+View 'slides' from hushcon:
+https://rawgit.com/securelyfitz/USBSanitizer/master/Hushcon%20East/Hushcon%20East%20-%20USBSanitizer%20presentation.html#/overview
+
+Disclaimer:
+-----------
+USB sanitizer has some issues with a large humber of USB drives right now. I should have an update shortly once i properly probe the SCSI device status/ready commands before writing...
 
 Overview
 ---------
