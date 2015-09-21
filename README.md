@@ -41,8 +41,12 @@ Hardware
 Software
 --------
 FTDI provides an IDE and compiler for the VNC2 for windows only. It didn't run well on WINE on my inital attempts. The IDE can only be downloaded from them, without SSL. FTDI doesn't provide hashes of the executables either. If you're lucky enough to get the same embedded malware as me, your MD5s should be:
-- 7b60bdc4313ed0449374dcaab23e0e84 http://www.ftdichip.com/Firmware/vnc2toolchain/Vinculum%20II%20Installer%20V2.0.0-SP1.exe
-- ab5ec25792ef7a4f780aa507cd326ba5 http://www.ftdichip.com/Support/Utilities/VPROG.zip
+- http://www.ftdichip.com/Firmware/vnc2toolchain/Vinculum%20II%20Installer%20V2.0.0-SP1.exe
+7b60bdc4313ed0449374dcaab23e0e84 
+- http://www.ftdichip.com/Support/Utilities/VPROG.zip
+ab5ec25792ef7a4f780aa507cd326ba5 
+- http://www.ftdichip.com/Support/Utilities/FT_Prog_v3.0.60.276%20Installer.zip
+f9a62778065ca541005dd138a52c5c99
 
 FTDI provides an API for doing some basic USB stuff. They've got APIs to navigate filesystems and play audio files, but they're missing the ability to do basic things like query the capacity of a block storage device. Because of this i basically wrote everything at the raw USB level. I let the FTDI library take care of ACKs and NAKs but otherwise do most of the data transfer myself.
 
