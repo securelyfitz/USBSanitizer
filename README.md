@@ -10,13 +10,13 @@ https://rawgit.com/securelyfitz/USBSanitizer/master/Hushcon%20East/Hushcon%20Eas
 
 Disclaimer:
 -----------
-USB sanitizer has some issues with a large humber of USB drives right now. I should have an update shortly once i properly probe the SCSI device status/ready commands before writing...
+USB sanitizer has some issues with a large number of USB drives right now. I should have an update shortly once i properly probe the SCSI device status/ready commands before writing...
 
 Overview
 ---------
 USB has issues, and being a very layered architecture, has layers of issues.
 
-I deal with distributing class material on USB drives at security conferences, and prefer to reuse drives. At first i had a standalone air-gapped PC that did the job automatically when a drive was inserted, and more recently i have used a pogoplug modified for the purpose. This is overkill, and it's also not any guarantee that my air-gapped system that never gets any updates isn't vulnerabile to layers of potentilly exploitable bugs.
+I deal with distributing class material on USB drives at security conferences, and prefer to reuse drives. At first i had a standalone air-gapped PC that did the job automatically when a drive was inserted, and more recently i have used a pogoplug modified for the purpose. This is overkill, and it's also not any guarantee that my air-gapped system that never gets any updates isn't vulnerable  to layers of potentially exploitable bugs.
 
 After seeing how USB drives are used to transport information to air-gapped computers and learning that many securedrop sites use USB drives to transfer data to air-gapped computers, i realized that there is a broader use for a simple, standalone USB drive wiper.
 
@@ -35,12 +35,12 @@ Hardware
 - The main IC is the FTDI VNC2 which has a proprietary harvard architecture, proprietary 'RTOS', built in flash, and built in usb host capability. No other chip that i found under $10 had all that on a single chip.
 - The board is 2.5x5cm. In addition to the VNC2, there is a single voltage regulator, a resonator, and a bunch of passive devices.
 - Power is provided by the USB Male connector. Data pins are not connected to this connector in a normal build. If connected, this device can also be used with Phil Polstra's USB-Writeblocker: https://github.com/ppolstra/USB-Writeblocker
-- A USB Female connector recieves the flash drive (or even usb hdd/ssd).
+- A USB Female connector receives the flash drive (or even usb hdd/ssd).
 - There is a 9 pin header for programming that can be unpopulated for production devices. Programming can be done via standard UART with hardware flow control.
 
 Software
 --------
-FTDI provides an IDE and compiler for the VNC2 for windows only. It didn't run well on WINE on my inital attempts. The IDE can only be downloaded from them, without SSL. FTDI doesn't provide hashes of the executables either. If you're lucky enough to get the same embedded malware as me, your MD5s should be:
+FTDI provides an IDE and compiler for the VNC2 for windows only. It didn't run well on WINE on my initial attempts. The IDE can only be downloaded from them, without SSL. FTDI doesn't provide hashes of the executables either. If you're lucky enough to get the same embedded malware as me, your MD5s should be:
 - http://www.ftdichip.com/Firmware/vnc2toolchain/Vinculum%20II%20Installer%20V2.0.0-SP1.exe
 7b60bdc4313ed0449374dcaab23e0e84 
 - http://www.ftdichip.com/Support/Utilities/VPROG.zip
